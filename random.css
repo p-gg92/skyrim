@@ -1,0 +1,127 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+header {
+	text-align:center;
+	padding:10px;
+	font-weight:bold;
+}
+
+.ul1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float:left;
+	width:33.333%;
+}
+
+li a, .dropbtn {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: #111;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width:33%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1
+	}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.items{
+	padding:10px;
+}
+
+
+#article1{
+	text-align:center;
+}
+
+#article2{
+	padding:10px;
+}
+
+#image1:hover {
+	opacity:0.5;
+}
+
+#image2:hover {
+	opacity:0.5;
+}
+
+#image3:hover {
+	opacity:0.5;
+}
+
+#image1{
+	width:30%;
+	padding:10px;
+}
+
+#image2{
+	width:30%;
+	padding:10px;
+}
+
+#image3{
+	width:30%;
+	padding:10px;
+}
+
+#skyran{
+	background-color:blue;
+	float:left;
+	width:13%;
+}
+
+input{
+	width:94%;
+}
+
+#descriptions{
+	float:left;
+	background-color:red;
+	width:87%;
+}
+
+.ethdiv{
+	font-size:14px;
+	
+}
+
+.racediv{
+	padding-left:10px;
+}
+
+#altmer{
+}

@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>skyrim</title>
+<script src="jquery.js"></script>
+<script src="random.js"></script>
+<style>
+    body { background-color: #808080; }
+ </style>
+</head>
+<body>
+<header>
+RPG Character Randomizer
+</header>
+<nav>
+<ul class="ul1">
+	<li><a href="index.html">Home</a></li>
+    <li class="dropdown"></a>
+    	<a href="javascript:void(0)" class="dropbtn">Randomizers</a>
+    	<div class="dropdown-content">
+      	<a href="#">Link 1</a>
+      	<a href="#">Link 2</a>
+      	<a href="#">Link 3</a>
+   		</div>
+    </li>
+    <li><a href="credits.html">Credits</a></li>
+</ul>
+</nav>
+<article id="article2">
+<div id="skyran">
+	<button id="randomize">Randomize!</button>
+	<p>Race:</p> <input type="text" id="race" name="race"> <button id="rerollrace">Reroll</button>
+	<p>Main Talents:</p> <input type="text" id="talent1"> <button id="ret1">Reroll</button> <br> <br>
+					 <input type="text" id="talent2"> <button id="ret2">Reroll</button>
+	<p>Ethical Alignment: </p> <input type="text" id="ethical"> <button id="reea">Reroll</button>
+	<p>Primary Virtue:</p> <input type="text" id="virtue"> <button id="repv">Reroll</button>
+	<p>Primary Flaw:</p> <input type="text" id="flaw"> <button id="repf">Reroll</button>
+	<p>Current Occupation:</p> <input type="text" id="co"> <button id="reco">Reroll</button>
+	<p>Starting Location:</p> <input type="text" id="sl"> <button id="resl">Reroll</button>
+	<p>Interests:</p> <input type="text" id="intr"> <button id="reintr">Reroll</button>
+	<p>Motivation:</p> <input type="text" id="mot"> <button id="rem">Reroll</button>
+	<p>Main Quest Alliance:</p> <input type="text" id="mqa"> <button id="remqa">Reroll</button>
+	<p>Vampire, Werewolf, or None:</p> <input type="text" id="vwn"> <button id="revwn">Reroll</button>
+</div>
+<!--
+<div id="descriptions">
+<div class="racediv">
+	<p id="race1"><b>Altmer</b>: The Altmer, or self-titled "Cultured People", are a tall, golden-skinned race, hailing from Summerset Isle. They are also known as High Elves by the denizens of Tamriel.</p>
+    <p id="race2"><b>Argonian</b>: Argonians (in their native tongue of Jel they call themselves the Saxhleel, or People of the Root) are the reptilian natives of Black Marsh, a vast swampland province in southeastern Tamriel. The other races often prefer to refer to them as 'lizards' or the 'Lizard Folk' instead, especially when meaning to be derogative.</p>
+    <p id="race3"><b>Bosmer</b>: The Bosmer are the Elven clan-folk of Valenwood, a forested province in southwestern Tamriel. In the Empire, they are often referred to as Wood Elves, but Bosmer, Boiche, or the Tree-Sap people is what they call themselves.</p>
+    <p id="race4"><b>Breton</b>: Bretons are the human descendants of the Aldmeri-Nedic Manmer of the Merethic Era and are now the inhabitants of the province of High Rock. They are united in culture and language, even though they are divided politically, for High Rock is a fractious region.</p>
+    <p id="race5"><b>Dunmer</b>: The Dunmer, also known as Dark Elves, are the ash-skinned, typically red-eyed elven peoples of Morrowind. "Dark" is commonly understood as meaning such characteristics as "dark-skinned", "gloomy", "ill-favored by fate" and so on. The Dunmer and their national identity, however, embrace these various connotations with enthusiasm.</p>
+    <p id="race6"><b>Imperial</b>: Also known as Cyrodiils, Cyrodilics, Cyro-Nordics and Imperial Cyrods, the well-educated and well-spoken Imperials are the natives of the civilized, cosmopolitan province of Cyrodiil.</p>
+    <p id="race7"><b>Khajit</b>: Khajiit are cat-like people who come from Elsweyr, known for high intelligence and agility. These traits make them very good thieves and acrobats, but Khajiit are also fearsome warriors.</p>
+    <p id="race8"><b>Nord</b>: The Nords are the children of the sky, a race of tall and fair-haired humans from Skyrim who are known for their incredible resistance to cold and magical frost. They are fierce, strong and enthusiastic warriors, and many become renowned warriors, soldiers and mercenaries all over Tamriel.</p>
+    <p id="race9"><b>Orc</b>: Orcs, also called Orsimer or "Pariah Folk" in ancient times, are sophisticated, beastlike people of the Wrothgarian Mountains, Dragontail Mountains, Valenwood, and Orsinium (literally translated as "Orc-Town"). They are noted for their unshakable courage in war and their unflinching endurance of hardships.</p>
+    <p id="race10"><b>Redguard</b>: Redguards are the most naturally talented warriors in Tamriel. The dark-skinned, wiry-haired people of Hammerfell seem born to battle, though their pride and fierce independence of spirit makes them more suitable as scouts or skirmishers, or as free-ranging heroes and adventurers, than as rank-and-file soldiers.</p>
+</div>
+<div id="talentdiv">
+	<p id="talent1"><b>Two handed:</b> The Two-Handed skill dictates the effectiveness of greatswords, battleaxes, and warhammers.</p>
+    <p id="talent2"><b>Heavy Armor:</b> Those trained to use Heavy Armor make more effective use of Iron, Steel, Dwarven, Orcish, Ebony, and Daedric armors.</p>
+    <p id="talent3"><b>Smithing:</b> The Smithing skill is used to create weapons and armor from raw materials, or improve existing non-magical weapons and armor.</p>
+    <p id="talent4"><b>Restoration:</b> The School of Restoration focuses on the mastery over life forces, and is used to cast spells like Healing, Turn Undead, and Lesser Ward.</p>
+    <p id="talent5"><b>Destruction:</b> The School of Destruction focuses on the mastery of fire, frost and shock, and is used to cast spells like Fireball, Ice Spike, and Lightning Bolt.</p>
+    <p id="talent6"><b>Conjuration:</b> The School of Conjuration is used to raise the dead, summon creatures from one of the planes of Oblivion, and soul trap opponents killed in combat.</p>
+    <p id="talent7"><b>Lockpicking:</b> The Lockpicking skill is used to open locked doors and containers faster and with fewer broken lockpicks.</p>
+    <p id="talent8"><b>Alchemy:</b> The Alchemy skill determines the creation and potency of potions and poisons.</p>
+    <p id="talent9"><b>Enchanting:</b> The higher the Enchanting skill, the stronger the magic that can be bound to weapons and armor.</p>
+    <p id="talent10"><b>Speech:</b> The Speech skill is used to get better prices from merchants and persuade, intimidate, or even bribe others.</p>
+    <p id="talent11"><b>Illusion:</b> The School of Illusion focuses on the manipulation of an enemy's mind, and is used to cast spells like Fear, Charm and Invisibility.</p>
+    <p id="talent12"><b>Alteration:</b> The School of Alteration focuses on the manipulation of the physical world, and is used to cast spells like Waterbreathing, Magical Armor and Magelight.</p>
+    <p id="talent13"><b>One Handed:</b> The One-Handed skill improves the use of weapons such as daggers, swords, maces and war axes.</p>
+    <p id="talent14"><b>Block:</b> The Block skill reduces the damage and stagger from physical attacks when blocking with either a shield or weapon.</p>
+    <p id="talent15"><b>Light Armor:</b> The Light Armor skill allows for more effective use of Hide, Leather, Elven, and Glass armors.</p>
+    <p id="talent16"><b>Archery :</b> The Archery skill improves the use of bows and arrows. The greater the skill, the more deadly the shot.</p>
+    <p id="talent17"><b>Pickpocket:</b> The Pickpocket skill is used to take things from an unsuspecting target's pockets... and not get caught in the process.</p>
+    <p id="talent18"><b>Sneak:</b> The Sneak skill makes it more difficult to be detected, which in turn allows for deadly stealth attacks.</p>
+</div>
+-->
+<div class="ethdiv">
+	<ul class="ul2"><b>Chaotic Good</b>
+    	<dl>- Seeks to aid others and protect them from harm.</dl>
+        <dl>- Values freedom and individual choice.</dl>
+        <dl>- Is not bound by promises made, but does not deceive without reason.</dl>
+        <dl>- Distrusts authority.</dl>
+        <dl>- Is loyal to friends and good teammates, but not necessarily to their methods.</dl>
+    </ul>
+    <ul class="ul3"><b>Neutral Good</b>
+    	<dl>- Seeks to aid others and protect them from harm.</dl>
+        <dl>- Is not concerned about honor as much as virtue.</dl>
+        <dl>- Is not deceptive, but might break promises if circumstances change.</dl>
+        <dl>- Accepts benevolent authority.</dl>
+        <dl>- Is loyal to friends and good teammates.</dl>
+    </ul>
+     <ul class="ul4"><b>Lawful Good</b>
+    	<dl>- Seeks to aid others and protect them from harm.</dl>
+        <dl>- Values just laws and self-discipline.</dl>
+        <dl>- Is honest and honors promises made.</dl>
+        <dl>- Respects legitimate authority.</dl>
+        <dl>- Is loyal to friends and good teammates.</dl>
+    </ul>
+     <ul class="ul5"><b>Chaotic Neutral</b>
+    	<dl>- Tends to let others fend for themselves.</dl>
+        <dl>- Values freedom.</dl>
+        <dl>- Is not bound by promises made.</dl>
+        <dl>- Rejects authority.</dl>
+        <dl>- Is loyal only to oneself.</dl>
+    </ul>
+     <ul class="ul6"><b>True Neutral</b>
+    	<dl>- May treat others well or poorly as circumstances dictate.</dl>
+        <dl>- Neither values nor disregards honor.</dl>
+        <dl>- Is usually not habitually deceptive, but may break promises if circumstances change.</dl>
+        <dl>- May work with or against authority.</dl>
+        <dl>- May be loyal or faithless, depending on the character and circumstances.</dl>
+    </ul>
+     <ul class="ul7"><b>Lawful Neutral</b>
+    	<dl>- May punish the guilty and reward the innocent.</dl>
+        <dl>- Values law, order, and self-discipline.</dl>
+        <dl>- Will keep promises if possible.</dl>
+        <dl>- Respects authority.</dl>
+        <dl>- Is loyal to teammates.</dl>
+    </ul>
+     <ul class="ul8"><b>Chaotic Evil</b>
+    	<dl>- Has no qualms about hurting or killing anyone; some even kill innocents for fun.</dl>
+        <dl>- Rejects honor and self-discipline as weaknesses.</dl>
+        <dl>- Will say anything to accomplish goals; keeping one's word is done only when opportune.</dl>
+        <dl>- Accepts another's authority only when forced.</dl>
+        <dl>- Will betray friends and teammates to further selfish goals.</dl>
+    </ul>
+     <ul class="ul9"><b>Neutral Evil</b>
+    	<dl>- Has no qualms about hurting or killing anyone.</dl>
+        <dl>- Places no value on honor.</dl>
+        <dl>- Might keep promises to allies, but does not feel bound to do so.</dl>
+        <dl>- Might accept another's authority in name only.</dl>
+        <dl>- May betray friends to advance a cause or to benefit themself.</dl>
+    </ul>
+     <ul class="ul10"><b>Lawful Evil</b>
+    	<dl>- Has no qualms about hurting or killing anyone, but may prefer to do so indirectly.</dl>
+        <dl>- Values consistency and reliability, particularly when they can be used.</dl>
+        <dl>- Prefers to not outright lie; deceit comes when others draw inferences beyond what is explicitly said..</dl>
+        <dl>- Accepts another's authority until it can be usurped.</dl>
+        <dl>- Is outwardly loyal to teammates unless (or until) betrayal can be justified.</dl>
+    </ul>
+</div>
+</div>
+</article>
+</body>
+</html>
